@@ -1,0 +1,22 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment secrets
+.env
+
+# Logs
+*.log
+
+# Local runtime data
+outputs/chromadb/
+outputs/medtwin_runs.db
+
+# Streamlit
+.streamlit/secrets.toml

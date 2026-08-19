@@ -1,0 +1,58 @@
+# MediTwin AI — Reproducible Development Environment
+# Recommended Python: 3.11
+
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+streamlit==1.38.0
+pydantic==2.9.2
+python-dotenv==1.0.1
+
+# LangChain / LangGraph
+langchain==0.3.0
+langchain-core==0.3.0
+langgraph==0.2.27
+langchain-groq==0.2.0
+
+# Optional LLM provider
+openai==1.50.0
+# langchain-openai==0.2.0
+
+# PyTorch
+torch
+torchvision
+
+# Vision / Image
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+
+# ML / Data Science
+scikit-learn==1.5.2
+shap==0.46.0
+numpy==1.26.4
+pandas==2.2.3
+joblib==1.4.2
+
+# NLP / Embeddings
+sentence-transformers==3.1.1
+transformers==4.44.2
+
+# Vector Database
+chromadb==0.5.11
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Reports
+fpdf2==2.7.9
+
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.27.2
+
+# Utilities
+requests==2.32.3
+tqdm==4.66.5
