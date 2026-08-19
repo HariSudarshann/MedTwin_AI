@@ -239,7 +239,7 @@ with tabs[0]:
         st.markdown("<div class='sub-header'>🫁 Chest X-Ray Upload</div>", unsafe_allow_html=True)
         xray_file = st.file_uploader("Upload Chest X-Ray (JPG/PNG)", type=["jpg", "jpeg", "png"], key="xray_up")
         if xray_file:
-            st.image(xray_file, caption="Uploaded X-Ray", use_container_width=True)
+            st.image(xray_file, caption="Uploaded X-Ray", use_column_width=True)
 
     with col2:
         st.markdown("<div class='sub-header'>📝 Clinical Notes / History</div>", unsafe_allow_html=True)
@@ -336,7 +336,7 @@ with tabs[1]:
             if xb:
                 from PIL import Image
                 img = Image.open(io.BytesIO(xb))
-                st.image(img, use_container_width=True)
+                st.image(img, use_column_width=True)
             else:
                 st.info("No X-ray image uploaded")
 
@@ -344,7 +344,7 @@ with tabs[1]:
             st.markdown("**Grad-CAM Heatmap**")
             gcam = imaging.get("gradcam_b64")
             if gcam:
-                st.image(b64_to_img(gcam), caption="Grad-CAM — highlighted regions influenced prediction", use_container_width=True)
+                st.image(b64_to_img(gcam), caption="Grad-CAM — highlighted regions influenced prediction", use_column_width=True)
             else:
                 st.info("Grad-CAM available after uploading an X-ray")
 
@@ -393,7 +393,7 @@ with tabs[2]:
             shap_b64 = lab.get("shap_waterfall_b64")
             if shap_b64:
                 st.markdown("**SHAP Waterfall — Feature Contributions**")
-                st.image(b64_to_img(shap_b64), use_container_width=True)
+                st.image(b64_to_img(shap_b64), use_column_width=True)
             else:
                 st.info("SHAP plot available after training the model.")
 
